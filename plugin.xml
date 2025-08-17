@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-clear-app-cache" version="1.0.0" 
+        xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <name>Clear App Cache</name>
+    <description>Cordova plugin to clear entire Android application cache</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,cache,clear,android,storage</keywords>
+    <repo>https://github.com/yourusername/cordova-plugin-clear-app-cache.git</repo>
+    <issue>https://github.com/yourusername/cordova-plugin-clear-app-cache/issues</issue>
+
+    <engines>
+        <engine name="cordova" version=">=7.0.0" />
+    </engines>
+
+    <js-module src="www/ClearAppCache.js" name="ClearAppCache">
+        <clobbers target="cordova.plugins.ClearAppCache" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ClearAppCache">
+                <param name="android-package" value="com.yourcompany.plugins.ClearAppCache" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/ClearAppCache.java" 
+                     target-dir="src/com/yourcompany/plugins" />
+                     
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+        </config-file>
+    </platform>
+</plugin>
