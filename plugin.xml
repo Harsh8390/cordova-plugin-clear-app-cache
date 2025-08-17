@@ -7,8 +7,8 @@
     <description>Cordova plugin to clear entire Android application cache</description>
     <license>Apache 2.0</license>
     <keywords>cordova,cache,clear,android,storage</keywords>
-    <repo>https://github.com/yourusername/cordova-plugin-clear-app-cache.git</repo>
-    <issue>https://github.com/yourusername/cordova-plugin-clear-app-cache/issues</issue>
+    <repo>https://github.com/Harsh8390/cordova-plugin-clear-app-cache</repo>
+    <issue>https://github.com/Harsh8390/cordova-plugin-clear-app-cache/issues</issue>
 
     <engines>
         <engine name="cordova" version=">=7.0.0" />
@@ -29,7 +29,7 @@
                      target-dir="src/com/yourcompany/plugins" />
                      
         <config-file target="AndroidManifest.xml" parent="/manifest">
-            <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+            
         </config-file>
     </platform>
 </plugin>
